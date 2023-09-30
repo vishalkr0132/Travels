@@ -1,0 +1,44 @@
+{% extends "AdminPannel/layout.html" %}
+{% load static %}
+{% block body %}
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li style="margin-left: auto;"> 
+                                <a href="upload_destination">
+
+                                    <div class="btn" style="float: right; text-align: justify; margin-left: auto;">Add new</div>
+                                </a>
+                            </li>
+                        </ol>
+                        <div class="row">
+                            
+                            <div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
+                                <h4 class="destination mb-3">ANDAMAN</h4>
+                                <div class="image-position position-relative">
+                                    <img src="{% static '/images/china.jpg' %}" class="img-fluid" alt="">
+                                    <div class="rating">
+                                        <ul>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                            <li><span class="fa fa-star"></span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="destinations-info">
+                                    <div class="caption mb-lg-3">
+                                        <h4>ANDAMAN</h4>
+                                        <a href="booking">Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </main>
+                {% endblock body %}

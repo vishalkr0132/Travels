@@ -1,0 +1,224 @@
+
+{% extends "layout.html" %}
+{% load static %}
+
+{% block body %}
+<!-- banner -->
+<section class="banner_w3lspvt" id="home">
+	<div class="csslider infinity" id="slider1">
+		<input type="radio" name="slides" checked="checked" id="slides_1" />
+		<input type="radio" name="slides" id="slides_2" />
+		<input type="radio" name="slides" id="slides_3" />
+		<input type="radio" name="slides" id="slides_4" />
+		<ul>
+			{% for i in Bannner_detail %}
+			<li >
+				<div class="banner-top" style="background-image: url('media/{{ i.image }}');">
+					<div class="overlay" >
+						<div class="container" >
+							<div class="w3layouts-banner-info" >
+								<h3 class="text-wh typewriter-text-animation">{{ i.title}}</h3>
+								<h4 class="text-wh typewriter-text-animation">{{ i.description }}</h4>
+								{% comment %} <h4 class="text-wh typewriter-text-animation"><img src="media/{{ i.image }}" ></h4> {% endcomment %}
+								<div class="buttons mt-4">
+									<a href="about" class="btn mr-2">About Us</a>
+									<a href="booking" class="btn">Book a Tour</a>
+								</div>
+							</div>
+							<!---->
+						</div>
+					</div>
+				</div>
+			</li>
+			 {% endfor %}
+
+		</ul>
+		<div class="arrows">
+			<label for="slides_1"></label>
+			<label for="slides_2"></label>
+			<label for="slides_3"></label>
+			<label for="slides_4"></label>
+		</div>
+	</div>
+</section>
+<!-- //banner -->
+
+<!-- about -->
+<section class="about py-5">
+	<div class="container py-lg-5 py-sm-4">
+		<div class="row">
+			<div class="col-lg-6 about-left">
+				<h3 class="mt-lg-3">We will take you to the Top destination in the world, <strong>Explore with us!</strong></h3>
+				<p class="mt-4">Duis nisi sapien, elementum finibus fermentum eget, aliquet leo et. Mauris hendrerit vel ex.
+				Quisque vitae luctus massa. Phasellus sed aliquam leo. Vestibulum ullamcorper a massa eu fringilla. Integer ultrices finibus sed nisi.
+				in convallis felis dapibus sit amet.</p>
+				<p class="mt-3"> Donec a arcu et sapien hendrerit accumsan. Pellentesque sit amet eros iac, elementum 
+				urna ipsum accumsan, iaculis ligula. Aenean quam eget maximus in convallis felis dapibus sit amet.</p>
+			</div>
+			<div class="col-lg-6 about-right text-lg-right mt-lg-0 mt-5">
+				<img src="{% static '/images/about.jpg' %}" alt="" class="img-fluid abt-image" />
+			</div>
+		</div>
+		<!-- counting-->
+		<div class="row mt-5 text-center">
+			<div class="col-lg-3 col-6">
+				<div class="counter">
+					<span class="fa fa-smile-o"></span>
+					<div class="timer count-title count-number" data-to="1000">0</div>
+					<p class="count-text text-uppercase">happy customers</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-6">
+				<div class="counter">
+					<span class="fa fa-ship"></span>
+					<div class="timer count-title count-number" data-to="2271">0</div>
+					<p class="count-text text-uppercase">Tours & Travels</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-6 mt-lg-0 mt-5">
+				<div class="counter">
+					<span class="fa fa-users"></span>
+					<div class="timer count-title count-number" data-to="200">0</div>
+					<p class="count-text text-uppercase">destinations</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-6 mt-lg-0 mt-5">
+				<div class="counter">
+					<span class="fa fa-gift"></span>
+					<div class="timer count-title count-number" data-to="20">0</div>
+					<p class="count-text text-uppercase">experience</p>
+				</div>
+			</div>
+		</div>
+		<!-- End count-->
+	</div>
+</section>
+<!-- //about -->
+
+<!-- how to book -->
+ <section class="book py-5">
+	<div class="container py-lg-5 py-sm-3">
+		<h2 class="heading text-capitalize text-center"> How To Plan Your Trip</h2>
+		<div class="row mt-5 text-center">
+			<div class="col-lg-4 col-sm-6">
+				<div class="grid-info">
+					<div class="icon">
+						<span class="fa fa-map-signs"></span>
+					</div>
+					<h4>Pick Destination</h4>
+					<p class="mt-3">Vestibulum urna ligula, molestie at ante ut, finibus. Integer ultrices finibus sed nisi in convallis sed dolor.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 mt-sm-0 mt-5">
+				<div class="grid-info">
+					<div class="icon">
+						<span class="fa fa-calendar"></span>
+					</div>
+					<h4>Select Date</h4>
+					<p class="mt-3">Vestibulum urna ligula, molestie at ante ut, finibus. Integer ultrices finibus sed nisi in convallis sed dolor.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6 mt-lg-0 mt-5">
+				<div class="grid-info">
+					<div class="icon">
+						<span class="fa fa-gift"></span>
+					</div>
+					<h4>Enjoy the Trip</h4>
+					<p class="mt-3">Vestibulum urna ligula, molestie at ante ut, finibus. Integer ultrices finibus sed nisi in convallis sed dolor.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+<!-- //how to book -->
+
+<!-- tour packages -->
+<section class="packages py-5">
+	<div class="container py-lg-4 py-sm-3">
+		<h3 class="heading text-capitalize text-center"> Discover our tour packages</h3>
+		<p class="text mt-2 mb-5 text-center">Vestibulum tellus neque, sodales vel mauris at, rhoncus finibus augue. Vestibulum urna ligula, molestie at ante ut, finibus vulputate felis.</p>
+		<div class="row">
+			{% for i in Package_detail %}
+			<a href="packages/{{ i.id }}">
+			<div class="col-lg-3 col-sm-6">
+				<div class="image-tour position-relative">
+					<img src="media/{{ i.image }}" alt="" class="img-fluid" />
+					<p><span class="fa fa-tags"></span> <span>{{ i.prize }}</span></p>
+				</div>
+				<div class="package-info">
+					<h6 class="mt-1"><span class="fa fa-map-marker mr-2"></span> {{ i.location }} </h6>
+					<h5 class="my-2"> {{ i.title }} </h5>
+					<p class=""> {{ i.description }} </p>
+					<ul class="listing mt-3">
+						<li><span class="fa fa-clock-o mr-2"></span>Duration : <span> {{ i.duration }} </span></li>
+					</ul>
+				</div>
+			</a>
+			</div>
+			{% endfor %}
+			
+			</div>
+		</div>
+		<div class="view-package text-center mt-4">
+			<a href="packages">View All Packages</a>
+		</div>
+	</div>
+</section>
+<!-- tour packages -->
+
+<!-- destinations -->
+<section class="destinations py-5" id="destinations">
+	<div class="container py-xl-5 py-lg-3">
+		<h3 class="heading text-capitalize text-center"> Popular Destinations</h3>
+		<p class="text mt-2 mb-5 text-center">Vestibulum tellus neque, sodales vel mauris at, rhoncus finibus augue. Vestibulum urna ligula, molestie at ante ut, finibus vulputate felis.</p>
+		<div class="row inner-sec-w3layouts-w3pvt-lauinfo">
+			{% for i in Destination %}
+			<div class="col-md-3 col-sm-6 col-6 destinations-grids text-center">
+				<h4 class="destination mb-3">{{ i.place }}</h4>
+				<div class="image-position position-relative">
+					<img src="media/{{ i.image }}" class="img-fluid" alt="">
+					<div class="rating">
+						<ul>
+							{% comment %} {% for j in {{i.rat}}%} {% endcomment %}
+							<li><span class="fa fa-star"></span></li>
+							<li><span class="fa fa-star"></span></li>
+							<li><span class="fa fa-star"></span></li>
+							<li><span class="fa fa-star"></span></li>
+							<li><span class="fa fa-star"></span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="destinations-info">
+					<div class="caption mb-lg-3">
+						<h4>{{ i.place }}</h4>
+						<a href="place/{{ i.id }}">More Detail</a>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+</section>
+<!-- destinations -->
+
+<!-- text -->
+<section class="text-content">
+	<div class="overlay-inner py-5">
+		<div class="container py-md-3">
+			<div class="test-info">
+				<h4 class="tittle">Enjoy The Trip</h4>
+				<p class="mt-3">Duis nisi sapien, elementum finibus fermentum eget, aliquet leo et. Mauris hendrerit vel ex. Quisque vitae luctus massa.
+				Phasellus sed aliquam leo a massa eu fringilla. Integer ultrices finibus sed nisi. in convallis felis dapibus
+				sit amet.</p>
+				<div class="text-left mt-4">
+						<a href="booking">Book Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //text -->
+	
+
+{% endblock body %}
